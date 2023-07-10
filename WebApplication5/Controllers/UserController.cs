@@ -144,31 +144,31 @@ namespace WebApplication5.Controllers
         }
 
         // PUT api/values/5
-        [HttpPut("UpdateUser")]
-        public ActionResult<dynamic> Put([FromQuery] CreateUser value)
-        {
-            bool create = false;
-            dynamic result;
-            try
-            {
-                create = GetDataRepo.createUser(value);
-                result = new
-                {
-                    code = (int)HttpStatusCode.OK,
-                    message = HttpStatusCode.OK.ToString()
-                };
-            }
-            catch (Exception ex)
-            {
+        //[HttpPut("UpdateUser")]
+        //public ActionResult<dynamic> Put([FromQuery] CreateUser value)
+        //{
+        //    bool create = false;
+        //    dynamic result;
+        //    try
+        //    {
+        //        create = GetDataRepo.createUser(value);
+        //        result = new
+        //        {
+        //            code = (int)HttpStatusCode.OK,
+        //            message = HttpStatusCode.OK.ToString()
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                result = new
-                {
-                    code = (int)HttpStatusCode.BadRequest,
-                    message = ex.Message
-                };
-            }
-            return StatusCode(result.code, result);
-        }
+        //        result = new
+        //        {
+        //            code = (int)HttpStatusCode.BadRequest,
+        //            message = ex.Message
+        //        };
+        //    }
+        //    return StatusCode(result.code, result);
+        //}
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
