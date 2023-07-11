@@ -30,13 +30,13 @@ namespace WebApplication5
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Training", Version = "v1",
-                    Description = "Ini adalah API untuk Training",
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Movie", Version = "v1",
+                    Description = "Ini adalah API untuk Test",
                     Contact = new OpenApiContact
                     {
-                        Name = "Ghifar Virawan",
-                        Email = "moch.ghifar@artha-it.com",
-                        Url = new Uri("https://www.artha-it.com/"),
+                        Name = "Bayu Emellyo",
+                        Email = "bayuemellyo@gmail.com",
+                        //Url = new Uri("https://www.artha-it.com/"),
                     },
                 });
             });
@@ -60,7 +60,7 @@ namespace WebApplication5
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TrainingAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestMOVIEAPI");
             });
             app.UseHttpsRedirection();
             app.UseMvc();

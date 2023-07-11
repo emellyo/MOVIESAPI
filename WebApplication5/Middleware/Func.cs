@@ -99,5 +99,10 @@ namespace WebApplication5.Middleware
             }
             return cipherText;
         }
+
+        internal static List<T> ConvertDataTable<T>(object value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
